@@ -52,11 +52,12 @@ html, body{
     height: 100vh;
     max-height: 350px;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border-radius: 40px;
     -webkit-box-shadow: 0px 0px 47px -17px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 47px -17px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 47px -17px rgba(0,0,0,0.75);
     padding: 20px;
+    color: white;
 }
 
 .autor{
@@ -80,68 +81,114 @@ html, body{
 .text-autor h1{
     font-weight: 400;
     font-size: 30px;
-    color: white;
 }
 
 .text-autor p{
     font-weight: 300;
     font-size: 14px;
-    color: white;
     font-style: italic;
 }
 
+/* Trabalhando o Conteudo */
 
-/*.filtro{
+.conteudo{
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1.16em;
+}
+
+.conteudo ul{
+    list-style-type: none;
+    line-height: 2.5em;       
+}
+
+.conteudo a{
+	text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 1em;
+    margin-right: 15px;
+}
+
+.conteudo nav ul li div{
+    display: inline-flex;
+    width: 125px;
+    transition: width 4s;
+    overflow: hidden;
+}
+.conteudo nav ul li div span{
+    cursor: default;
+    white-space: nowrap;
+}
+
+.conteudo nav ul li div ul{
+    display: inline-flex;
+    opacity: 0;
+    margin-left: 180px;
+    transition: opacity 1s, margin-left 2s;
+}
+
+.conteudo nav ul li div.contato{
+    display: inline-block;
+    height: 35px;
+    transition: height 500ms, width 4s;
+}
+
+.conteudo nav ul li div.contato ul{
+    display: block;
+    white-space: nowrap;
+    margin-top: -8px;
+    line-height: 1.3em;
+}
+
+.conteudo nav ul li div.contato:hover{
+    height: 110px;
+}
+
+.conteudo nav ul li div:hover{
     width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.5);
-    border-radius: 10px;
-}*/
+}
 
+.conteudo nav ul li div:hover ul{
+    opacity: 1;
+    margin-left: 20px;
+}
 
+.conteudo nav ul li div ul li i{
+    margin-right: 15px;
+    size: 1.3em;
+}
+
+@media screen and (max-width: 460px){
+    .conteudo{
+        font-size: 1em;
+    }
+    .conteudo ul{
+        line-height: 2em;
+    }
+    .conteudo nav ul li div.contato ul{
+        margin-top: 0;
+        line-height: 1.5em;
+        size: 5%;
+    }
+    .conteudo nav ul li div ul li i{
+        margin-right: 8px;
+    }
+}
+
+/*  trabalhando o Logo */
 
 .logo{
     position: absolute;
-    right: 10px;
-    bottom: 30px;
-	width: 220px;
-    height: 80px;
+    right: 15px;
+    bottom: 15px;
+	width: 130px;
+    height: 40px;
 	background-image: url('../img/logo-sem-fundo.png');
 	background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 
-/*
-
-nav.menu{
-    float: right;
-    position: relative;
-    top: 20px;
-	width: 500px;
-	height: 25px;
-	text-align: center;
-}
-
-nav.menu ul{
-	list-style-type: none;
-}
-
-nav.menu li{
-	float: left;
-	margin-left: 30px;
-}
-
-nav.menu li a{
-	text-decoration: none;
-	color: white;
-    font-size: 20px;
-    font-weight: 200;
-}
-
-nav.menu li a:hover{
-	font-weight: 300;
-}
-*/
